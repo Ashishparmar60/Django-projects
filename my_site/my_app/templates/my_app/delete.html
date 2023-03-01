@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}    
+    <h1>Delete</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="first_name">Enter Name to delete the entry.</label>
+        <div class="form-group">
+            <input class="form-control" type="text", id="first_name" name="first_name" >
+                <p></p>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit">
+        </div>
+    </form>
+    {% endblock %}
+</body>
+</html>
